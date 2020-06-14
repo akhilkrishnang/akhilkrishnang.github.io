@@ -1,0 +1,52 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+.sidebar {
+    width: 60px;
+    background: #333;
+    position: fixed;
+    height: 100%;
+}
+
+.content {
+    margin-left: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px 10px;
+    grid-template-rows: 1fr 2fr auto;
+    grid-template-areas: ". . . ." "dp dp name name" ". about about .";
+}
+
+.content__dp {
+    grid-area: dp;
+    justify-self: end;
+}
+
+.content__name-box {
+    grid-area: name;
+}
+
+.content__about-me {
+    grid-area: about;
+}
+
+.name-box__name {
+    font-size: 50px;
+}
+
+.name-box__name--first {
+    font-weight: 400;
+}
+
+.name-box__name--last {
+    font-weight: 100;
+}
+
+.dp__dp-img {
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border: 5px solid #e0e0e0;
+    height: 150px;
+}
