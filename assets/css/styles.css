@@ -14,7 +14,7 @@ body {
     width: auto;
     background: #333;
     position: sticky;
-    top:0;
+    bottom:0;
     left:0;
     height: 100%;
     grid-area: sidebar;
@@ -64,7 +64,10 @@ body {
         border-bottom-left-radius: 50%;
     }
     .content__dp {
-        grid-area: dp;
         justify-self: end;
+    }
+    .content__sidebar {
+        top:0;
+        left:0;
     }
 }
