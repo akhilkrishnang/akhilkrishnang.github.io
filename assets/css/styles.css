@@ -2,26 +2,27 @@ body {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
 }
-
-.sidebar {
-    width: 60px;
-    background: #333;
-    position: fixed;
-    height: 100%;
-}
-
+ /* Grid design for the small devices */ 
 .content {
-    margin-left: 60px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 20px 10px;
-    grid-template-rows: 1fr 2fr auto;
-    grid-template-areas: ". . . ." "dp dp name name" ". about about .";
+    grid-template-columns: 20px 1fr 20px;    
+    grid-template-rows: 40px auto auto auto 60px;
+    grid-template-areas: ". . . " ". dp ." ". name ." ". about ." "sidebar sidebar sidebar";
+}
+.content__sidebar {
+    width: auto;
+    background: #333;
+    position: sticky;
+    top:0;
+    left:0;
+    height: 100%;
+    grid-area: sidebar;
 }
 
 .content__dp {
     grid-area: dp;
-    justify-self: end;
+    justify-self: start;
 }
 
 .content__name-box {
@@ -45,8 +46,25 @@ body {
 }
 
 .dp__dp-img {
-    border-top-left-radius: 50%;
-    border-bottom-left-radius: 50%;
+    border-radius: 50%;
     border: 5px solid #e0e0e0;
     height: 150px;
+}
+
+@media (min-width:641px)  {
+    /* Any device bigger than portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
+    .content {
+        grid-template-columns: 60px 1fr 1fr 1fr 1fr;
+        grid-template-rows: 100px auto auto;
+        grid-template-areas: "sidebar . . . ." "sidebar dp dp name name" "sidebar . about about .";
+    }
+    .dp__dp-img {
+        border-radius: 0;
+        border-top-left-radius: 50%;
+        border-bottom-left-radius: 50%;
+    }
+    .content__dp {
+        grid-area: dp;
+        justify-self: end;
+    }
 }
