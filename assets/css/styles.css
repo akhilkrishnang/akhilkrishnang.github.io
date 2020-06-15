@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     color: #393939;
@@ -5,11 +9,21 @@ body {
 }
 
 /* Styles & Grid design for the small devices */
+
 .content {
     padding: 20px;
 }
+
 .content__sidebar {
     display: none;
+}
+
+.content--header {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 35px;
+    margin-top: 20px;
+    display: flex;
+    margin-bottom: 15px;
 }
 
 .content__name-box {
@@ -34,6 +48,65 @@ body {
     height: 150px;
 }
 
+.content__seperator {
+    border-top: 1px solid #ccc;
+    margin-top: 20px;
+    margin-left: 5px;
+    width: 100%;
+}
+
+.skills__main, .skills__sub {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skills__sub {
+    margin-top: 20px;
+}
+
+.skills__box {
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    padding: 5px 15px;
+    border-radius: 20px;
+    width: max-content;
+    margin-bottom: 8px;
+}
+
+.skills__sub-skill {
+    margin-right: 24px;
+    margin-bottom: 12px;
+}
+
+.skill-name--small {
+    font-size: 14px;
+    margin-top: -1px;
+    float: left;
+}
+
+.material-icons.md-18 {
+    font-size: 18px;
+    float: left;
+}
+.material-icons.sidebar__menu-icon {
+    color: #b9b9b9;
+    font-size: 32px;
+    cursor: pointer;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.sidebar__menu-icon:hover {
+    color: #fff;
+}
+
+.sidebar__menu--active .sidebar__menu-icon {
+    background: #1c1c1c;
+    border-radius: 50%;
+    padding: 10px;
+    color: #ffce00;
+}
+
 /* Check browser support for Grid features - and enable better layout */
 
 @supports (display: grid) {
@@ -41,8 +114,17 @@ body {
         display: grid;
         gap: 20px 10px;
         grid-template-columns: 20px 1fr 20px;
-        grid-template-rows: 40px auto auto auto 60px;
-        grid-template-areas: ". . . " ". dp ." ". name ." ". about ." "sidebar sidebar sidebar";
+        grid-template-rows: 40px auto auto auto auto auto 60px;
+        grid-template-areas: 
+        ". . . " 
+        ". dp ." 
+        ". name ." 
+        ". about ." 
+        ". skills-header ." 
+        ". skills ." 
+        ". experience-header ." 
+        ". experience ." 
+        "sidebar sidebar sidebar";
         padding: 0;
     }
     .content__sidebar {
@@ -53,7 +135,17 @@ body {
         bottom: 0;
         left: 0;
         height: 100%;
-        grid-area: sidebar;
+        grid-area: sidebar;        
+    }
+    .content__sidebar-items {
+        position: sticky;
+        top: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 60%;
+        height: 60px;
     }
     .content__dp {
         grid-area: dp;
@@ -65,25 +157,49 @@ body {
     .content__about-me {
         grid-area: about;
     }
+    .content__skills-header {
+        grid-area: skills-header;
+    }
+    .content__skills {
+        grid-area: skills;
+    }
+    .content__experience-header {
+        grid-area: experience-header;
+    }
+    .content__experience {
+        grid-area: experience;
+    }
 }
 
 /* Overriding grid & styles for large devices */
 
 @media (min-width:641px) {
-        
     @supports (display: grid) {
         .content {
-            grid-template-columns: 60px 1fr 1fr 1fr 1fr;
-            grid-template-rows: 100px auto auto;
-            grid-template-areas: "sidebar . . . ." "sidebar dp dp name name" "sidebar . about about .";
+            grid-template-columns: 60px 1fr 1fr 2fr 2fr 1fr 1fr;
+            grid-template-rows: 100px auto auto auto auto;
+            grid-template-areas: 
+            "sidebar . . . . . ." 
+            "sidebar . dp dp name name ." 
+            "sidebar . . about about . ." 
+            "sidebar . skills-header skills-header skills-header skills-header ." 
+            "sidebar . . skills skills . ." 
+            "sidebar . experience-header experience-header experience-header experience-header ." 
+            "sidebar . . experience experience . .";
         }
         .content__sidebar {
             top: 0;
-            left: 0;
+            left: 0;            
+        }
+        .content__sidebar-items{
+            flex-direction: column;
+            height: 30%;
+            justify-content: space-evenly;
+            width: 100%;
         }
         .content__dp {
             justify-self: end;
-        }        
+        }
         .dp__dp-img {
             border-radius: 0;
             border-top-left-radius: 50%;

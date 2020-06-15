@@ -11,12 +11,23 @@
 
     <link rel="stylesheet" href="assets/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans+Condensed:wght@300;700&family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
-    <div class="content">
+    <div class="content" id="profile" ref="profile">
         <div class="content__sidebar">
-
+            <div class="content__sidebar-items">
+                <div class="sidebar__menu" v-bind:class="{'sidebar__menu--active': activeSection==='profile'}" @click="goto('profile')">
+                    <i class="material-icons sidebar__menu-icon">face</i>
+                </div>
+                <div class="sidebar__menu" v-bind:class="{'sidebar__menu--active': activeSection==='skills'}" @click="goto('skills')">
+                    <i class="material-icons sidebar__menu-icon">build</i>
+                </div>
+                <div class="sidebar__menu" v-bind:class="{'sidebar__menu--active': activeSection==='experience'}" @click="goto('experience')">
+                    <i class="material-icons sidebar__menu-icon">card_travel</i>
+                </div>
+            </div>            
         </div>
         <div class="content__dp">
             <img  src="assets/images/dp.jpg" class="dp__dp-img"/>
@@ -31,8 +42,38 @@
             Passionate about Photography. Engineering professional with a B.Tech focused in Computer Science from
             Cochin University of Science and Technology.
         </div>
+
+        <div class="content__skills-header content--header" ref="skills">
+            <div>SKILLS</div>
+            <div class="content__seperator"></div>
+        </div>
+
+        <div class="content__skills">
+            <div class="skills__list">
+                <div class="skills__main">
+                   <div v-for="skill in mainSkills" class="skills__box">
+                       {{skill.name}}
+                   </div>
+                </div>
+                <div class="skills__sub">
+                    <div v-for="skill in subSkills" class="skills__sub-skill">
+                        <i class="material-icons md-18">label_important</i><div class="skill-name--small">{{skill}}</div>
+                    </div>
+                 </div>
+            </div>
+        </div>
+
+        <div class="content__experience-header content--header" ref="experience">
+            <div>EXPERIENCE</div>
+            <div class="content__seperator"></div>
+        </div>
+
+        <div class="content__experience">
+           
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="assets/js/controller.js"></script>
 </body>
 
 </html>
