@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -15,25 +16,26 @@
 </head>
 
 <body>
-    <div class="content" id="profile" ref="profile">
+    <div class="content" id="profile-app">
         <div class="content__sidebar">
             <div class="content__sidebar-items">
-                <div class="sidebar__menu" v-bind:class="{'sidebar__menu--active': activeSection==='profile'}" @click="goto('profile')">
-                    <i class="material-icons sidebar__menu-icon">face</i>
+                <div class="sidebar__menu">
+                    <a href="#home" class="material-icons sidebar__menu-icon sidebar__menu-icon--active">face</a>
                 </div>
-                <div class="sidebar__menu" v-bind:class="{'sidebar__menu--active': activeSection==='skills'}" @click="goto('skills')">
-                    <i class="material-icons sidebar__menu-icon">build</i>
+                <div class="sidebar__menu">
+                    <a href="#skills" class="material-icons sidebar__menu-icon">build</a>
                 </div>
-                <div class="sidebar__menu" v-bind:class="{'sidebar__menu--active': activeSection==='experience'}" @click="goto('experience')">
-                    <i class="material-icons sidebar__menu-icon">card_travel</i>
+                <div class="sidebar__menu">
+                    <a href="#experience" class="material-icons sidebar__menu-icon">card_travel</a>
                 </div>
             </div>            
         </div>
+        <div id="home" class="content__home"></div>
         <div class="content__dp">
             <img  src="assets/images/dp.jpg" class="dp__dp-img"/>
         </div>
         <div class="content__name-box">
-            <span class="name-box__name name-box__name--first">AKHIL</span></br>
+            <span class="name-box__name name-box__name--first">AKHIL</span><br/>
             <span class="name-box__name name-box__name--last">KRISHNAN G</span>
         </div>
         <div class="content__about-me">
@@ -43,7 +45,7 @@
             Cochin University of Science and Technology.
         </div>
 
-        <div class="content__skills-header content--header" ref="skills">
+        <div class="content__skills-header content--header" id="skills">
             <div>SKILLS</div>
             <div class="content__seperator"></div>
         </div>
@@ -63,7 +65,7 @@
             </div>
         </div>
 
-        <div class="content__experience-header content--header" ref="experience">
+        <div class="content__experience-header content--header" id="experience">
             <div>EXPERIENCE</div>
             <div class="content__seperator"></div>
         </div>
@@ -73,6 +75,7 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
     <script src="assets/js/controller.js?v=0.1"></script>
 </body>
 
