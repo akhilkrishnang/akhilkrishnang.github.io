@@ -1,3 +1,7 @@
+/**
+ * View JS Controller
+ * used mainly for dynamic data rendering
+ */
 var app = new Vue({
     el: '#profile-app',
     data: {
@@ -19,8 +23,28 @@ var app = new Vue({
     }
 })
 
+// Returns a function, that, as long as it continues to be invoked, will not
+// be triggered. The function will be called after it stops being called for
+// N milliseconds. If `immediate` is passed, trigger the function on the
+// leading edge, instead of the trailing.
+function debounce(func, wait, immediate) {
+	var timeout;
+	return function() {
+		var context = this, args = arguments;
+		var later = function() {
+			timeout = null;
+			if (!immediate) func.apply(context, args);
+		};
+		var callNow = immediate && !timeout;
+		clearTimeout(timeout);
+		timeout = setTimeout(later, wait);
+		if (callNow) func.apply(context, args);
+	};
+};
+
 let mainNavLinks = document.querySelectorAll(".content__sidebar-items a");
 function updateActiveLink() {
+    console.log("in");
     let fromTop = window.scrollY;
     let linksLength = mainNavLinks.length;
     for (var i = 0; i < linksLength; i++) {
@@ -41,4 +65,6 @@ function updateActiveLink() {
         }
     }
 }
-window.addEventListener("scroll", _.throttle(updateActiveLink, 100));
+
+var debouncedActivateFn = debounce(updateActiveLink, 100);
+window.addEventListener("scroll",debouncedActivateFn);//Debouncing for performance benefit
