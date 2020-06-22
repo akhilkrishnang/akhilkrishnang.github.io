@@ -19,7 +19,32 @@ var app = new Vue({
             { name: 'Jasmine', rank: '80' },
             { name: '+' }
         ],
-        subSkills: ['RESTful web services', 'LESS/SCSS', 'Agile/Scrum', 'JIRA', 'Google Material Design', 'Airbnb Design follower', 'Eclipse/STS ', 'VSCode', 'IBM CLM', 'Adobe Photoshop', 'Figma']
+        subSkills: ['RESTful web services', 'LESS/SCSS', 'Agile/Scrum', 'JIRA', 'Google Material Design', 'Airbnb Design follower', 'Eclipse/STS ', 'VSCode', 'IBM CLM', 'Adobe Photoshop', 'Figma'],
+        experiences : [
+            {
+                companyName:'IBS Softwares',
+                timeLine:[
+                    {designation:'SOLUTION ARCHITECT',period:'Jul 2019 - Present'},
+                    {designation:'TECHNICAL LEAD',period:'Jun 2017 - ul 2019'},
+                    {designation:'SENIOR SOFTWARE ENGINEER',period:'Jun 2016 - Jun 2017'},
+                    {designation:'SOFTWARE ENGINEER',period:'Jan 2014 - Jun 2016'}
+                ],
+                summary: 'Started career as a Full Stack Java Developer using Spring MVC and AngularJS. Currently more focused into front-end design and development using latest web technologies. 6+ years of product life cycle experience (Travel & Logistics Business)',
+                highlights:[
+                    'Designing UX for web applications, UI screen development and maintenance','Pioneer UX transformation initiatives and Hackathons in company','Create User Interface Sketches and Design','Develop reusable UI components with AngularJS and JavaScript','Fine-tune UI & business components in order to save loading time','Develop cross-browser, responsive designed screens with HTML5, Bootstrap, Google Material UI and CSS','Maintain UI checklist and coding standards for the project','Carry out code reviews and unit testing ','Mentoring junior developers'	
+                ]
+            },
+            {
+                companyName:'ClaySys Technologies',
+                timeLine:[
+                    {designation:'SOFTWARE ENGINEER',period:'Jun 2013 - Dec 2013'}
+                ],
+                summary: 'Worked in different service projects in various technologies.',
+                highlights:[
+                    'Web/iPad analytical tool using different chart components','Desktop applications for windows using MVVM and WPF','Data transformation engines using SSIS, SSRS and XML','Live chat web application using ASP.net and HTML5'	
+                ]
+            }
+        ]
     }
 })
 
