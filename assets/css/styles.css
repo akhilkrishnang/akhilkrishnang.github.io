@@ -107,6 +107,57 @@ body {
     color: #ffce00;
 }
 
+.item__seperator.item__seperator--xs{
+    font-size: 8px;
+}
+
+.experience0__highlights-area {
+    text-align: justify;
+}
+
+.title-area__title {
+    font-size: 20px;
+    font-weight: 700;
+    height: 50px;
+}
+
+.experience__time-line-area {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.time-line-area__position {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 18px;
+    color: #e1b600;
+    display: flex;
+}
+.time-line-area__position-group:first-child .time-line-area__position{
+    font-size: 28px;
+}
+.time-line-area__position-group .time-line-area__period{
+    height: 40px;
+    display: flex;
+}
+.time-line-area__position-group:first-child .time-line-area__period{
+    height: 60px;
+}
+.time-line-area__position-group .time-line-area__line{
+    width: 15px;
+    margin-left: 15px;
+    border-left: 1px solid #ccc;
+}
+.time-line-area__position-group:last-child .time-line-area__line{
+    border-left: none;
+}
+.time-line-area__dot {
+    width: 30px;
+    text-align: center;
+}
+.time-line-area__dot .material-icons {
+    font-size: 12px;
+    color: #ccc;
+}
 /* Check browser support for Grid features - and enable better layout */
 
 @supports (display: grid) {

@@ -24,10 +24,10 @@ var app = new Vue({
             {
                 companyName:'IBS Softwares',
                 timeLine:[
-                    {designation:'SOLUTION ARCHITECT',period:'Jul 2019 - Present'},
-                    {designation:'TECHNICAL LEAD',period:'Jun 2017 - ul 2019'},
-                    {designation:'SENIOR SOFTWARE ENGINEER',period:'Jun 2016 - Jun 2017'},
-                    {designation:'SOFTWARE ENGINEER',period:'Jan 2014 - Jun 2016'}
+                    {position:'SOLUTION ARCHITECT',period:'Jul 2019 - Present'},
+                    {position:'TECHNICAL LEAD',period:'Jun 2017 - Jul 2019'},
+                    {position:'SENIOR SOFTWARE ENGINEER',period:'Jun 2016 - Jun 2017'},
+                    {position:'SOFTWARE ENGINEER',period:'Jan 2014 - Jun 2016'}
                 ],
                 summary: 'Started career as a Full Stack Java Developer using Spring MVC and AngularJS. Currently more focused into front-end design and development using latest web technologies. 6+ years of product life cycle experience (Travel & Logistics Business)',
                 highlights:[
@@ -37,12 +37,32 @@ var app = new Vue({
             {
                 companyName:'ClaySys Technologies',
                 timeLine:[
-                    {designation:'SOFTWARE ENGINEER',period:'Jun 2013 - Dec 2013'}
+                    {position:'SOFTWARE ENGINEER',period:'Jun 2013 - Dec 2013'}
                 ],
                 summary: 'Worked in different service projects in various technologies.',
                 highlights:[
                     'Web/iPad analytical tool using different chart components','Desktop applications for windows using MVVM and WPF','Data transformation engines using SSIS, SSRS and XML','Live chat web application using ASP.net and HTML5'	
                 ]
+            }
+        ],
+        achievements:[
+            'Represented company in an international Hackathon event organised by International Air Transport Association (IATA) at Dublin, Ireland and bagged first prize in corporate category. Sole UI developer in the Hackathon team (IBS Software)',
+            'Awarded 5 Team Champ Awards and 1 Department Champ Award during various stages of career for UX protoype design,  creating new business components, introducing coding standards, and fine tuning UI components (IBS Software)',
+            'Best Debutant Award for an extra ordinary start in organisation (IBS Software)',
+            'Oil & Gas Logistics Industry business knowledge & certification (IBS Software)'
+        ],
+        education: [
+            {
+                course:'GRADUATION',
+                period:'2009-2013',
+                institute:'Govt. College of Engineering, Cherthala',
+                summary:'Computer Science and Engineering(B.Tech.) with Distinction having 76% marks from Cochin University of Science and Technology.'
+            },
+            {
+                course:'10+2',
+                period:'2007-2009',
+                institute:'Holy Family HSS, Cherthala',
+                summary:'Computer Science. Higher secondary education from Board of higher secondary education , Kerala with 84% marks.'
             }
         ]
     }
