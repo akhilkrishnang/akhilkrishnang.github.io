@@ -74,13 +74,13 @@
         </div>
 
         <div class="content__experience">
-            <div class="experience__title-area">
+            <div class="experience__title-area experience__title-area--first">
                 <div class="title-area__title">
                     {{experiences[0].companyName}}
                 </div>
             </div>
 
-            <div class="experience__time-line-area">
+            <div class="experience__time-line-area experience__time-line-area--first">
                 <div v-for="item in experiences[0].timeLine" class="time-line-area__position-group">
                     <div class="time-line-area__position">
                         <div class="time-line-area__dot"><span class="material-icons">
@@ -95,15 +95,50 @@
                 </div>
             </div>
 
-            <div class="experience__summary-area">
+            <div class="experience__summary-area experience__summary-area--first">
                 <div class="summary-area__summary">
                     {{experiences[0].summary}}
                 </div>
             </div>
 
-            <div class="experience__highlights-area">
+            <div class="experience__highlights-area experience__highlights-area--first">
                 <ul>
                     <li class="highlights-area__item" v-for="(item,index) in experiences[0].highlights">
+                        {{item}}
+                    </li>
+                </ul>
+            </div>
+
+            <div class="experience__title-area experience__title-area--second">
+                <div class="title-area__title">
+                    {{experiences[1].companyName}}
+                </div>
+            </div>
+
+            <div class="experience__time-line-area experience__time-line-area--second">
+                <div v-for="item in experiences[1].timeLine" class="time-line-area__position-group">
+                    <div class="time-line-area__position">
+                        <div class="time-line-area__dot"><span class="material-icons">
+                                stop_circle
+                            </span></div>
+                        <div>{{item.position}}</div>
+                    </div>
+                    <div class="time-line-area__period">
+                        <div class="time-line-area__line"></div>
+                        <div>{{item.period}}</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="experience__summary-area experience__summary-area--second">
+                <div class="summary-area__summary">
+                    {{experiences[1].summary}}
+                </div>
+            </div>
+
+            <div class="experience__highlights-area experience__highlights-area--second">
+                <ul>
+                    <li class="highlights-area__item" v-for="(item,index) in experiences[1].highlights">
                         {{item}}
                     </li>
                 </ul>
