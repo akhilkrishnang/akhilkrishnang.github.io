@@ -25,10 +25,16 @@
                     <a href="#home" class="material-icons sidebar__menu-icon sidebar__menu-icon--active">face</a>
                 </div>
                 <div class="sidebar__menu">
-                    <a href="#skills" class="material-icons sidebar__menu-icon">build</a>
+                    <a href="#skills" class="material-icons sidebar__menu-icon">construction</a>
                 </div>
                 <div class="sidebar__menu">
-                    <a href="#experience" class="material-icons sidebar__menu-icon">card_travel</a>
+                    <a href="#experience" class="material-icons sidebar__menu-icon">business_center</a>
+                </div>
+                <div class="sidebar__menu">
+                    <a href="#achievements" class="material-icons sidebar__menu-icon">emoji_events</a>
+                </div>
+                <div class="sidebar__menu">
+                    <a href="#education" class="material-icons sidebar__menu-icon">school</a>
                 </div>
             </div>
         </div>
@@ -144,6 +150,19 @@
                 </ul>
             </div>
         </div>
+
+        <div class="content__achievements-header content--header" id="achievements">
+            <div>ACHIEVEMENTS</div>
+            <div class="content__seperator"></div>
+        </div>
+
+        <div class="content__achievements">
+            <div class="achievements__node" v-for="ach in achievements">
+                <span class="material-icons">military_tech</span>
+                {{ach}}
+            </div>
+        </div>
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="assets/js/controller.js?v=0.1"></script>
