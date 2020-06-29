@@ -53,15 +53,17 @@ var app = new Vue({
         ],
         education: [
             {
-                course:'GRADUATION',
-                period:'2009-2013',
-                institute:'Govt. College of Engineering, Cherthala',
+                timeLine:[
+                    {position:'GRADUATION',period:'2009-2013'}
+                ],
+                companyName:'Govt. College of Engineering, Cherthala',
                 summary:'Computer Science and Engineering(B.Tech.) with Distinction having 76% marks from Cochin University of Science and Technology.'
             },
             {
-                course:'10+2',
-                period:'2007-2009',
-                institute:'Holy Family HSS, Cherthala',
+                timeLine:[
+                    {position:'10+2',period:'2007-2009'}
+                ],
+                companyName:'Holy Family HSS, Cherthala',
                 summary:'Computer Science. Higher secondary education from Board of higher secondary education , Kerala with 84% marks.'
             }
         ]

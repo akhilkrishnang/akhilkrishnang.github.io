@@ -158,9 +158,71 @@
 
         <div class="content__achievements">
             <div class="achievements__node" v-for="ach in achievements">
-                <span class="material-icons">military_tech</span>
-                {{ach}}
+                <div class="material-icons achievements__bullet">military_tech</div>
+                <div class="achievements__text">{{ach}}</div>
             </div>
+        </div>
+
+        <div class="content__education-header content--header" id="education">
+            <div>EDUCATION</div>
+            <div class="content__seperator"></div>
+        </div>
+
+        <div class="content__education">
+            <div class="education__title-area education__title-area--first">
+                <div class="title-area__title">
+                    {{education[0].companyName}}
+                </div>
+            </div>
+
+            <div class="education__time-line-area education__time-line-area--first">
+                <div v-for="item in education[0].timeLine" class="time-line-area__position-group">
+                    <div class="time-line-area__position">
+                        <div class="time-line-area__dot"><span class="material-icons">
+                                stop_circle
+                            </span></div>
+                        <div>{{item.position}}</div>
+                    </div>
+                    <div class="time-line-area__period">
+                        <div class="time-line-area__line"></div>
+                        <div>{{item.period}}</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="education__summary-area education__summary-area--first">
+                <div class="summary-area__summary">
+                    {{education[0].summary}}
+                </div>
+            </div>
+
+            <div class="education__title-area education__title-area--second">
+                <div class="title-area__title">
+                    {{education[1].companyName}}
+                </div>
+            </div>
+
+            <div class="education__time-line-area education__time-line-area--second">
+                <div v-for="item in education[1].timeLine" class="time-line-area__position-group">
+                    <div class="time-line-area__position">
+                        <div class="time-line-area__dot"><span class="material-icons">
+                                stop_circle
+                            </span></div>
+                        <div>{{item.position}}</div>
+                    </div>
+                    <div class="time-line-area__period">
+                        <div class="time-line-area__line"></div>
+                        <div>{{item.period}}</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="education__summary-area education__summary-area--second">
+                <div class="summary-area__summary">
+                    {{education[1].summary}}
+                </div>
+            </div>
+
         </div>
 
     </div>

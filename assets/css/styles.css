@@ -114,11 +114,11 @@ body {
 .title-area__title {
     font-size: 20px;
     font-weight: 700;
-    height: 30px;
+    height: auto;
+    margin-bottom: 20px;
 }
 
-.experience__time-line-area {
-    margin-bottom: 30px;
+.experience__time-line-area, .education__time-line-area {
     display: flex;
     flex-direction: column;
 }
@@ -126,14 +126,12 @@ body {
     font-family: 'Bebas Neue', cursive;
     font-size: 18px;
     color: #0a84d1;
-    display: flex;
 }
 .time-line-area__position-group:first-child .time-line-area__position{
     font-size: 28px;
 }
 .time-line-area__position-group .time-line-area__period{
     height: 40px;
-    display: flex;
 }
 .time-line-area__position-group:first-child .time-line-area__period{
     height: 60px;
@@ -154,9 +152,20 @@ body {
     font-size: 12px;
     color: #ccc;
 }
-.experience__highlights-area {
-    margin-bottom: 40px;
+.achievements__node{
+    display: flex;
 }
+.achievements__bullet {
+    margin-top: 4px;    
+}
+.achievements__bullet.material-icons {
+    font-size: 20px;
+}
+.achievements__text {
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
 /* Check browser support for Grid features - and enable better layout */
 
 @supports (display: grid) {
@@ -176,6 +185,8 @@ body {
         ". experience ." 
         ". achievements-header ." 
         ". achievements ."
+        ". education-header ."
+        ". education ."
         "sidebar sidebar sidebar";
         padding: 0;
     }
@@ -224,11 +235,20 @@ body {
     .content__experience {
         grid-area: experience;
     }
+    .time-line-area__position, .time-line-area__position-group .time-line-area__period{
+        display: flex;
+    }
     .content__achievements-header{
         grid-area: achievements-header;
     }
     .content__achievements{
         grid-area: achievements;
+    }
+    .content__education-header{
+        grid-area: education-header;
+    }
+    .content__education{
+        grid-area: education;
     }
 }
 
@@ -248,7 +268,9 @@ body {
             "sidebar . experience-header experience-header experience-header experience-header ." 
             "sidebar . experience experience experience . ."
             "sidebar . achievements-header achievements-header achievements-header achievements-header ."
-            "sidebar . . achievements achievements . .";
+            "sidebar . . achievements achievements . ."
+            "sidebar . education-header education-header education-header education-header ."
+            "sidebar . education education education . .";
         }
         .content__sidebar {
             top: 0;
@@ -256,7 +278,7 @@ body {
         }
         .content__sidebar-items{
             flex-direction: column;
-            height: 30%;
+            height: 270px;
             justify-content: space-evenly;
             width: 100%;
         }
@@ -281,7 +303,17 @@ body {
             "timeline-second summary-second"
             "timeline-second highlights-second";
         }
-
+        .content__education{
+            display: grid;
+            grid-template-columns: 230px auto;
+            grid-template-rows: repeat(4,auto);
+            grid-gap: 5px 20px;
+            grid-template-areas: 
+            "ed-timeline-first ed-title-first"
+            "ed-timeline-first ed-summary-first"
+            "ed-timeline-second ed-title-second"
+            "ed-timeline-second ed-summary-second";
+        }
         .experience__time-line-area--first{
             grid-area: timeline-first;
         }
@@ -293,8 +325,7 @@ body {
         }
         .experience__highlights-area--first{
             grid-area: highlights-first;
-        }
-        
+        }        
         .experience__time-line-area--second{
             grid-area: timeline-second;
         }
@@ -307,12 +338,30 @@ body {
         .experience__highlights-area--second{
             grid-area: highlights-second;
         }
-
         .time-line-area__position {
             flex-direction: row-reverse;
         }
         .time-line-area__period {
             flex-direction: row-reverse;
+        }
+
+        .education__time-line-area--first{
+            grid-area: ed-timeline-first;
+        }
+        .education__title-area--first{
+            grid-area: ed-title-first;
+        }
+        .education__summary-area--first{
+            grid-area: ed-summary-first;
+        }
+        .education__time-line-area--second{
+            grid-area: ed-timeline-second;
+        }
+        .education__title-area--second{
+            grid-area: ed-title-second;
+        }
+        .education__summary-area--second{
+            grid-area: ed-summary-second;
         }
     }
 }
