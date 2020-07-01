@@ -166,9 +166,9 @@ body {
     margin-bottom: 20px;
 }
 
-.footer-relax-sketch{
-    grid-area: footer-relax-sketch;
-    background: url("../images/biking.svg");
+.sketch-footer-relax{
+    grid-area: sketch-footer-relax;
+    background: url("../images/relax.svg");
     background-repeat: no-repeat;
     background-size: 300px;
     background-position: right;
@@ -195,7 +195,7 @@ body {
         ". achievements ."
         ". education-header ."
         ". education ."
-        ". footer-relax-sketch ."
+        ". sketch-footer-relax ."
         "sidebar sidebar sidebar";
         padding: 0;
     }
@@ -279,7 +279,7 @@ body {
             "sidebar . . achievements achievements . ."
             "sidebar . education-header education-header education-header education-header ."
             "sidebar . education education education . ."
-            "sidebar . . footer-relax-sketch footer-relax-sketch footer-relax-sketch .";
+            "sidebar . . sketch-footer-relax sketch-footer-relax sketch-footer-relax .";
         }
         .content__sidebar {
             top: 0;
@@ -372,7 +372,7 @@ body {
         .education__summary-area--second{
             grid-area: ed-summary-second;
         }        
-        .footer-relax-sketch{
+        .sketch-footer-relax{
             background-size: 400px;
         }
     }
