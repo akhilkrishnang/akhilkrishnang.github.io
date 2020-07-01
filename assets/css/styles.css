@@ -206,8 +206,7 @@ body {
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-evenly;
-        width: 60%;
+        justify-content: center;
         height: 60px;
     }
     .content__home{

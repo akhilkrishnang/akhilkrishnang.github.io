@@ -91,18 +91,17 @@ function debounce(func, wait, immediate) {
 
 let mainNavLinks = document.querySelectorAll(".content__sidebar-items a");
 function updateActiveLink() {
-    console.log("in");
     let fromTop = window.scrollY;
     let linksLength = mainNavLinks.length;
     for (var i = 0; i < linksLength; i++) {
         let currlink = mainNavLinks[i];
         let currSection = document.querySelector(currlink.hash);
-        let condition = fromTop >= currSection.offsetTop;//Check if scroll position is after start of section
+        let condition = fromTop+40 >= currSection.offsetTop;//Check if scroll position is after start of section
 
         if (i + 1 < linksLength) {//If there is next section, modify condition
             let nextlink = mainNavLinks[i + 1];
             let nextSection = document.querySelector(nextlink.hash);
-            condition = condition && (fromTop < nextSection.offsetTop)//Check if scroll not passed to next section start
+            condition = condition && (fromTop+40 < nextSection.offsetTop)//Check if scroll not passed to next section start
         }
 
         if (condition) {
