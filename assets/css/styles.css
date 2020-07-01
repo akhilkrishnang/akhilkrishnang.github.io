@@ -166,6 +166,14 @@ body {
     margin-bottom: 20px;
 }
 
+.footer-relax-sketch{
+    grid-area: footer-relax-sketch;
+    background: url("../images/biking.svg");
+    background-repeat: no-repeat;
+    background-size: 300px;
+    background-position: right;
+}
+
 /* Check browser support for Grid features - and enable better layout */
 
 @supports (display: grid) {
@@ -173,7 +181,7 @@ body {
         display: grid;
         gap: 20px 10px;
         grid-template-columns: 20px 1fr 20px;
-        grid-template-rows: 40px auto auto auto auto auto 60px;
+        grid-template-rows: 40px repeat(11,auto) 250px 60px;
         grid-template-areas: 
         ". home . " 
         ". dp ." 
@@ -187,6 +195,7 @@ body {
         ". achievements ."
         ". education-header ."
         ". education ."
+        ". footer-relax-sketch ."
         "sidebar sidebar sidebar";
         padding: 0;
     }
@@ -257,7 +266,7 @@ body {
     @supports (display: grid) {
         .content {
             grid-template-columns: 60px 1fr 2fr 4fr 4fr 2fr 1fr;
-            grid-template-rows: 100px auto auto auto auto;
+            grid-template-rows: 100px repeat(10,auto) 300px;
             grid-template-areas: 
             "sidebar . . home home . ." 
             "sidebar . dp dp name name ." 
@@ -269,7 +278,8 @@ body {
             "sidebar . achievements-header achievements-header achievements-header achievements-header ."
             "sidebar . . achievements achievements . ."
             "sidebar . education-header education-header education-header education-header ."
-            "sidebar . education education education . .";
+            "sidebar . education education education . ."
+            "sidebar . . footer-relax-sketch footer-relax-sketch footer-relax-sketch .";
         }
         .content__sidebar {
             top: 0;
@@ -361,6 +371,9 @@ body {
         }
         .education__summary-area--second{
             grid-area: ed-summary-second;
+        }        
+        .footer-relax-sketch{
+            background-size: 400px;
         }
     }
 }
