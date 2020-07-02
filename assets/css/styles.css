@@ -167,11 +167,18 @@ body {
 }
 
 .sketch-footer-relax{
-    grid-area: sketch-footer-relax;
+    grid-area: sk-f-r;
     background: url("../images/relax.svg");
     background-repeat: no-repeat;
     background-size: 300px;
     background-position: right;
+}
+.sketch-achievements{
+    grid-area: sk-ach;
+    background: url("../images/achievements.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
 /* Check browser support for Grid features - and enable better layout */
@@ -187,13 +194,13 @@ body {
         ". dp ." 
         ". name ." 
         ". about ." 
-        ". skills-header ." 
+        ". skills-head ." 
         ". skills ." 
-        ". experience-header ." 
+        ". exp-head ." 
         ". experience ." 
-        ". achievements-header ." 
+        ". ach-head ." 
         ". achievements ."
-        ". education-header ."
+        ". ed-head ."
         ". education ."
         ". sketch-footer-relax ."
         "sidebar sidebar sidebar";
@@ -232,13 +239,13 @@ body {
         grid-area: about;
     }
     .content__skills-header {
-        grid-area: skills-header;
+        grid-area: skills-head;
     }
     .content__skills {
         grid-area: skills;
     }
     .content__experience-header {
-        grid-area: experience-header;
+        grid-area: exp-head;
     }
     .content__experience {
         grid-area: experience;
@@ -247,13 +254,13 @@ body {
         display: flex;
     }
     .content__achievements-header{
-        grid-area: achievements-header;
+        grid-area: ach-head;
     }
     .content__achievements{
         grid-area: achievements;
     }
     .content__education-header{
-        grid-area: education-header;
+        grid-area: ed-head;
     }
     .content__education{
         grid-area: education;
@@ -265,21 +272,21 @@ body {
 @media (min-width:641px) {
     @supports (display: grid) {
         .content {
-            grid-template-columns: 60px 1fr 2fr 4fr 4fr 2fr 1fr;
+            grid-template-columns: 60px 1fr repeat(6,2fr) 1fr;
             grid-template-rows: 100px repeat(10,auto) 300px;
             grid-template-areas: 
-            "sidebar . . home home . ." 
-            "sidebar . dp dp name name ." 
-            "sidebar . . about about . ." 
-            "sidebar . skills-header skills-header skills-header skills-header ." 
-            "sidebar . . skills skills . ." 
-            "sidebar . experience-header experience-header experience-header experience-header ." 
-            "sidebar . experience experience experience . ."
-            "sidebar . achievements-header achievements-header achievements-header achievements-header ."
-            "sidebar . . achievements achievements . ."
-            "sidebar . education-header education-header education-header education-header ."
-            "sidebar . education education education . ."
-            "sidebar . . sketch-footer-relax sketch-footer-relax sketch-footer-relax .";
+            "sidebar . . . home home . . ." 
+            "sidebar . dp dp dp name name name ." 
+            "sidebar . . about about about about . ." 
+            "sidebar . skills-head skills-head skills-head skills-head skills-head skills-head ." 
+            "sidebar . . skills skills skills skills . ." 
+            "sidebar . exp-head exp-head exp-head exp-head exp-head exp-head ." 
+            "sidebar . experience experience experience experience experience . ."
+            "sidebar . ach-head ach-head ach-head ach-head ach-head ach-head ."
+            "sidebar . sk-ach sk-ach achievements achievements achievements achievements ."
+            "sidebar . ed-head ed-head ed-head ed-head ed-head ed-head ."
+            "sidebar . education education education education education . ."
+            "sidebar . sk-f-r sk-f-r sk-f-r sk-f-r sk-f-r sk-f-r .";
         }
         .content__sidebar {
             top: 0;
