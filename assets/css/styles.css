@@ -167,15 +167,29 @@ body {
 }
 
 .sketch-footer-relax{
-    grid-area: sk-f-r;
+    height: 300px;
     background: url("../images/relax.svg");
     background-repeat: no-repeat;
-    background-size: 300px;
+    background-size: contain;
     background-position: right;
 }
 .sketch-achievements{
-    grid-area: sk-ach;
+    height: 250px;
     background: url("../images/achievements.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.sketch-skills{
+    height: 150px;
+    background: url("../images/skills.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.sketch-exp{
+    height: 200px;
+    background: url("../images/experience.svg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -188,21 +202,23 @@ body {
         display: grid;
         gap: 20px 10px;
         grid-template-columns: 20px 1fr 20px;
-        grid-template-rows: 40px repeat(11,auto) 250px 60px;
+        grid-template-rows: 40px repeat(14,auto) 60px;
         grid-template-areas: 
         ". home . " 
         ". dp ." 
         ". name ." 
         ". about ." 
-        ". skills-head ." 
+        ". skills-head ."
+        ". sk-skill ."
         ". skills ." 
         ". exp-head ." 
         ". experience ." 
         ". ach-head ." 
+        ". sk-ach ."
         ". achievements ."
         ". ed-head ."
         ". education ."
-        ". sketch-footer-relax ."
+        ". sk-f-r ."
         "sidebar sidebar sidebar";
         padding: 0;
     }
@@ -265,6 +281,15 @@ body {
     .content__education{
         grid-area: education;
     }
+    .sketch-footer-relax{
+        grid-area: sk-f-r;
+    }
+    .sketch-achievements{
+        grid-area: sk-ach;
+    }
+    .sketch-skills{
+        grid-area: sk-skill;
+    }
 }
 
 /* Overriding grid & styles for large devices */
@@ -279,9 +304,9 @@ body {
             "sidebar . dp dp dp name name name ." 
             "sidebar . . about about about about . ." 
             "sidebar . skills-head skills-head skills-head skills-head skills-head skills-head ." 
-            "sidebar . . skills skills skills skills . ." 
+            "sidebar . sk-skill sk-skill skills skills skills skills ." 
             "sidebar . exp-head exp-head exp-head exp-head exp-head exp-head ." 
-            "sidebar . experience experience experience experience experience . ."
+            "sidebar . experience experience experience experience experience experience ."
             "sidebar . ach-head ach-head ach-head ach-head ach-head ach-head ."
             "sidebar . sk-ach sk-ach achievements achievements achievements achievements ."
             "sidebar . ed-head ed-head ed-head ed-head ed-head ed-head ."
@@ -308,16 +333,16 @@ body {
         }
         .content__experience{
             display: grid;
-            grid-template-columns: 230px auto;
+            grid-template-columns: 230px 4fr 2fr 1fr;
             grid-template-rows: repeat(6,auto);
             grid-gap: 5px 20px;
             grid-template-areas: 
-            "timeline-first title-first"
-            "timeline-first summary-first"
-            "timeline-first highlights-first"
-            "timeline-second title-second"
-            "timeline-second summary-second"
-            "timeline-second highlights-second";
+            "timeline-first title-first title-first ."
+            "timeline-first summary-first summary-first ."
+            "timeline-first highlights-first highlights-first ."
+            "timeline-second title-second sk-exp sk-exp"
+            "timeline-second summary-second sk-exp sk-exp"
+            "timeline-second highlights-second sk-exp sk-exp";
         }
         .content__education{
             display: grid;
@@ -381,6 +406,16 @@ body {
         }        
         .sketch-footer-relax{
             background-size: 400px;
+        }
+        .sketch-achievements{
+            height: auto;
+        }
+        .sketch-skills{
+            height: auto;
+        }
+        .sketch-exp{
+            height: auto;
+            grid-area:sk-exp; 
         }
     }
 }
