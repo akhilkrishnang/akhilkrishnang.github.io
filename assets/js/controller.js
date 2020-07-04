@@ -6,7 +6,8 @@ var app = new Vue({
     el: '#profile-app',
     data: {
         mainSkills: [
-            { name: 'HTML+CSS', rank: '90' },
+            { name: 'HTML', rank: '90' },
+            { name: 'CSS', rank: '90' },
             { name: 'Javascript', rank: '85' },
             { name: 'Angular JS', rank: '80' },
             { name: 'Angular', rank: '80' },
@@ -96,12 +97,12 @@ function updateActiveLink() {
     for (var i = 0; i < linksLength; i++) {
         let currlink = mainNavLinks[i];
         let currSection = document.querySelector(currlink.hash);
-        let condition = fromTop+40 >= currSection.offsetTop;//Check if scroll position is after start of section
+        let condition = fromTop+100 >= currSection.offsetTop;//Check if scroll position is after start of section
 
         if (i + 1 < linksLength) {//If there is next section, modify condition
             let nextlink = mainNavLinks[i + 1];
             let nextSection = document.querySelector(nextlink.hash);
-            condition = condition && (fromTop+40 < nextSection.offsetTop)//Check if scroll not passed to next section start
+            condition = condition && (fromTop+100 < nextSection.offsetTop)//Check if scroll not passed to next section start
         }
 
         if (condition) {

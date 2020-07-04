@@ -15,6 +15,7 @@
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans+Condensed:wght@300;700&family=Open+Sans:wght@300;400;600;700;800&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -43,8 +44,8 @@
             <img src="assets/images/dp.webp" class="dp__dp-img" />
         </div>
         <div class="content__name-box">
-            <span class="name-box__name name-box__name--first">AKHIL</span><br />
-            <span class="name-box__name name-box__name--last">KRISHNAN G</span>
+            <div class="name-box__name name-box__name--first">AKHIL</div>
+            <div class="name-box__name name-box__name--last">KRISHNAN G</div>
         </div>
         <div class="content__about-me">
             Experienced Programmer with a demonstrated history of working in the information technology products and
@@ -83,7 +84,7 @@
 
         <div class="content__experience">
             <div class="sketch-exp"></div>
-            
+
             <div class="experience__title-area experience__title-area--first">
                 <div class="title-area__title">
                     {{experiences[0].companyName}}
@@ -232,6 +233,42 @@
         </div>
 
         <div class="sketch-footer-relax"></div>
+
+        <div class="content__footer">
+            <div class="footer__tech-profiles">
+                <a href="https://www.linkedin.com/in/akhilkrishnang/" target="_blank">
+                    <div class="footer__icon"><i class="devicon-linkedin-plain colored"></i></div>
+                </a>
+                <a href="https://github.com/akhilkrishnang" target="_blank">
+                    <div class="footer__icon"><i class="devicon-github-plain colored"></i></div>
+                </a>
+                <a href="https://www.behance.net/akhilkrishnang" target="_blank">
+                    <div class="footer__icon"><i class="devicon-behance-plain colored"></i></div>
+                </a>
+            </div>
+            <div class="footer__social">
+                <a href="https://www.facebook.com/akhilkrishnang" target="_blank">
+                    <div class="footer__icon"><i class="devicon-facebook-plain colored"></i></div>
+                </a>
+                <a href="https://www.instagram.com/instaakg/" target="_blank">
+                    <div class="footer__icon"><img src="assets/images/social_logos/insta.svg" /></div>
+                </a>
+                <a href="http://500px.com/akhilkrishnang" target="_blank">
+                    <div class="footer__icon"><img src="assets/images/social_logos/500px.svg" /></div>
+                </a>
+            </div>
+            <div class="footer__contact">
+                <a href="https://www.akhilkrishnang.com/" target="_blank">
+                    <div class="footer__icon"><i class="devicon-wordpress-plain colored"></i></div>
+                </a>
+                <a href="mailto:akhilrohini@gmail.com" target="_blank">
+                    <div class="footer__icon"><img src="assets/images/social_logos/email.svg" /></div>
+                </a>
+                <a href="https://wa.me/919645568733" target="_blank">
+                    <div class="footer__icon"><img src="assets/images/social_logos/whatsapp.svg" /></div>
+                </a>
+            </div>
+        </div>
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
