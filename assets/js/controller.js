@@ -23,7 +23,7 @@ var app = new Vue({
         subSkills: ['RESTful web services', 'LESS/SCSS', 'Agile/Scrum', 'JIRA', 'Google Material Design', 'Airbnb Design follower', 'Eclipse/STS ', 'VSCode', 'IBM CLM', 'Adobe Photoshop', 'Figma'],
         experiences : [
             {
-                companyName:'IBS Softwares',
+                companyName:'IBS Software',
                 timeLine:[
                     {position:'SOLUTION ARCHITECT',period:'Jul 2019 - Present'},
                     {position:'TECHNICAL LEAD',period:'Jun 2017 - Jul 2019'},
