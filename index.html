@@ -16,6 +16,7 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -40,28 +41,28 @@
             </div>
         </div>
         <div id="home" class="content__home"></div>
-        <div class="content__dp">
+        <div class="content__dp" data-aos="zoom-in" data-aos-once="true">
             <img src="assets/images/dp.webp" class="dp__dp-img" />
         </div>
-        <div class="content__name-box">
+        <div class="content__name-box" data-aos="zoom-in-right" data-aos-once="true">
             <div class="name-box__name name-box__name--first">AKHIL</div>
             <div class="name-box__name name-box__name--last">KRISHNAN G</div>
         </div>
-        <div class="content__about-me">
+        <div class="content__about-me" data-aos="zoom-in" data-aos-once="true">
             Experienced Programmer with a demonstrated history of working in the information technology products and
             services industry. Strong affinity towards UI/UX design and front-end development. Loves JavaScript.
             Passionate about Photography. Engineering professional with a B.Tech focused in Computer Science from
             Cochin University of Science and Technology.
         </div>
 
-        <div class="content__skills-header content--header" id="skills">
+        <div class="content__skills-header content--header" id="skills" data-aos="fade-up" data-aos-once="true">
             <div>SKILLS</div>
             <div class="content__seperator"></div>
         </div>
 
-        <div class="sketch-skills"></div>
+        <div class="sketch-skills" data-aos="fade-right" data-aos-once="true"></div>
 
-        <div class="content__skills">
+        <div class="content__skills" data-aos="fade-up" data-aos-once="true">
             <div class="skills__list">
                 <div class="skills__main">
                     <div v-for="skill in mainSkills" class="skills__box">
@@ -77,13 +78,13 @@
             </div>
         </div>
 
-        <div class="content__experience-header content--header" id="experience">
+        <div class="content__experience-header content--header" id="experience" data-aos="fade-up" data-aos-once="true">
             <div>EXPERIENCE</div>
             <div class="content__seperator"></div>
         </div>
 
-        <div class="content__experience">
-            <div class="sketch-exp"></div>
+        <div class="content__experience" data-aos="fade-up" data-aos-once="true">
+            <div class="sketch-exp" data-aos="fade-left" data-aos-once="true"></div>
 
             <div class="experience__title-area experience__title-area--first">
                 <div class="title-area__title">
@@ -106,13 +107,13 @@
                 </div>
             </div>
 
-            <div class="experience__summary-area experience__summary-area--first">
+            <div class="experience__summary-area experience__summary-area--first" data-aos="fade-up" data-aos-once="true">
                 <div class="summary-area__summary">
                     {{experiences[0].summary}}
                 </div>
             </div>
 
-            <div class="experience__highlights-area experience__highlights-area--first">
+            <div class="experience__highlights-area experience__highlights-area--first" data-aos="fade-up" data-aos-once="true">
                 <ul>
                     <li class="highlights-area__item" v-for="(item,index) in experiences[0].highlights">
                         {{item}}
@@ -120,13 +121,13 @@
                 </ul>
             </div>
 
-            <div class="experience__title-area experience__title-area--second">
+            <div class="experience__title-area experience__title-area--second" data-aos="fade-up" data-aos-once="true">
                 <div class="title-area__title">
                     {{experiences[1].companyName}}
                 </div>
             </div>
 
-            <div class="experience__time-line-area experience__time-line-area--second">
+            <div class="experience__time-line-area experience__time-line-area--second" data-aos="fade-up" data-aos-once="true">
                 <div v-for="item in experiences[1].timeLine" class="time-line-area__position-group">
                     <div class="time-line-area__position">
                         <div class="time-line-area__dot"><span class="material-icons">
@@ -141,13 +142,13 @@
                 </div>
             </div>
 
-            <div class="experience__summary-area experience__summary-area--second">
+            <div class="experience__summary-area experience__summary-area--second" data-aos="fade-up" data-aos-once="true">
                 <div class="summary-area__summary">
                     {{experiences[1].summary}}
                 </div>
             </div>
 
-            <div class="experience__highlights-area experience__highlights-area--second">
+            <div class="experience__highlights-area experience__highlights-area--second" data-aos="fade-up" data-aos-once="true">
                 <ul>
                     <li class="highlights-area__item" v-for="(item,index) in experiences[1].highlights">
                         {{item}}
@@ -156,33 +157,33 @@
             </div>
         </div>
 
-        <div class="content__achievements-header content--header" id="achievements">
+        <div class="content__achievements-header content--header" id="achievements" data-aos="fade-up" data-aos-once="true">
             <div>ACHIEVEMENTS</div>
             <div class="content__seperator"></div>
         </div>
 
-        <div class="sketch-achievements"></div>
+        <div class="sketch-achievements" data-aos="fade-right" data-aos-once="true"></div>
 
-        <div class="content__achievements">
+        <div class="content__achievements" data-aos="fade-up" data-aos-once="true">
             <div class="achievements__node" v-for="ach in achievements">
                 <div class="material-icons achievements__bullet">military_tech</div>
                 <div class="achievements__text">{{ach}}</div>
             </div>
         </div>
 
-        <div class="content__education-header content--header" id="education">
+        <div class="content__education-header content--header" id="education" data-aos="fade-up" data-aos-once="true">
             <div>EDUCATION</div>
             <div class="content__seperator"></div>
         </div>
 
-        <div class="content__education">
+        <div class="content__education" data-aos="fade-up" data-aos-once="true">
             <div class="education__title-area education__title-area--first">
                 <div class="title-area__title">
                     {{education[0].companyName}}
                 </div>
             </div>
 
-            <div class="education__time-line-area education__time-line-area--first">
+            <div class="education__time-line-area education__time-line-area--first" data-aos="fade-up" data-aos-once="true">
                 <div v-for="item in education[0].timeLine" class="time-line-area__position-group">
                     <div class="time-line-area__position">
                         <div class="time-line-area__dot"><span class="material-icons">
@@ -197,19 +198,19 @@
                 </div>
             </div>
 
-            <div class="education__summary-area education__summary-area--first">
+            <div class="education__summary-area education__summary-area--first" data-aos="fade-up" data-aos-once="true">
                 <div class="summary-area__summary">
                     {{education[0].summary}}
                 </div>
             </div>
 
-            <div class="education__title-area education__title-area--second">
+            <div class="education__title-area education__title-area--second" data-aos="fade-up" data-aos-once="true">
                 <div class="title-area__title">
                     {{education[1].companyName}}
                 </div>
             </div>
 
-            <div class="education__time-line-area education__time-line-area--second">
+            <div class="education__time-line-area education__time-line-area--second" data-aos="fade-up" data-aos-once="true">
                 <div v-for="item in education[1].timeLine" class="time-line-area__position-group">
                     <div class="time-line-area__position">
                         <div class="time-line-area__dot"><span class="material-icons">
@@ -224,7 +225,7 @@
                 </div>
             </div>
 
-            <div class="education__summary-area education__summary-area--second">
+            <div class="education__summary-area education__summary-area--second" data-aos="fade-up" data-aos-once="true">
                 <div class="summary-area__summary">
                     {{education[1].summary}}
                 </div>
@@ -232,9 +233,9 @@
 
         </div>
 
-        <div class="sketch-footer-relax"></div>
+        <div class="sketch-footer-relax" data-aos="fade-left" data-aos-once="true"></div>
 
-        <div class="content__footer">
+        <div class="content__footer" data-aos="zoom-in" data-aos-anchor-placement="top-bottom" data-aos-once="true">
             <div class="footer__tech-profiles">
                 <a href="https://www.linkedin.com/in/akhilkrishnang/" target="_blank">
                     <div class="footer__icon"><i class="devicon-linkedin-plain colored"></i></div>
@@ -273,6 +274,10 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="assets/js/controller.js?v=0.3"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
