@@ -14,9 +14,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans+Condensed:wght@300;700&family=Open+Sans:wght@300;400;600;700;800&display=swap"
         rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/966ecd7dd2.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -24,19 +24,19 @@
         <div class="content__sidebar">
             <div class="content__sidebar-items">
                 <div class="sidebar__menu">
-                    <a href="#home" class="material-icons sidebar__menu-icon sidebar__menu-icon--active">face</a>
+                    <a href="#home" class="sidebar__menu-icon sidebar__menu-icon--active"><i class="fas fa-user"></i></a>
                 </div>
                 <div class="sidebar__menu">
-                    <a href="#skills" class="material-icons sidebar__menu-icon">construction</a>
+                    <a href="#skills" class="sidebar__menu-icon"><i class="fas fa-tools"></i></a>
                 </div>
                 <div class="sidebar__menu">
-                    <a href="#experience" class="material-icons sidebar__menu-icon">business_center</a>
+                    <a href="#experience" class="sidebar__menu-icon"><i class="fas fa-briefcase"></i></a>
                 </div>
                 <div class="sidebar__menu">
-                    <a href="#achievements" class="material-icons sidebar__menu-icon">emoji_events</a>
+                    <a href="#achievements" class="sidebar__menu-icon"><i class="fas fa-award"></i></a>
                 </div>
                 <div class="sidebar__menu">
-                    <a href="#education" class="material-icons sidebar__menu-icon">school</a>
+                    <a href="#education" class="sidebar__menu-icon"><i class="fas fa-graduation-cap"></i></a>
                 </div>
             </div>
         </div>
@@ -71,7 +71,7 @@
                 </div>
                 <div class="skills__sub">
                     <div v-for="skill in subSkills" class="skills__sub-skill">
-                        <i class="material-icons md-18">label_important</i>
+                        <i class="sub-skill-bullet fas fa-greater-than"></i>
                         <div class="skill-name--small">{{skill}}</div>
                     </div>
                 </div>
@@ -95,9 +95,7 @@
             <div class="experience__time-line-area experience__time-line-area--first">
                 <div v-for="item in experiences[0].timeLine" class="time-line-area__position-group">
                     <div class="time-line-area__position">
-                        <div class="time-line-area__dot"><span class="material-icons">
-                                stop_circle
-                            </span></div>
+                        <div class="time-line-area__dot"><i class="fas fa-circle"></i></div>
                         <div>{{item.position}}</div>
                     </div>
                     <div class="time-line-area__period">
@@ -130,9 +128,7 @@
             <div class="experience__time-line-area experience__time-line-area--second" data-aos="fade-up" data-aos-once="true">
                 <div v-for="item in experiences[1].timeLine" class="time-line-area__position-group">
                     <div class="time-line-area__position">
-                        <div class="time-line-area__dot"><span class="material-icons">
-                                stop_circle
-                            </span></div>
+                        <div class="time-line-area__dot"><i class="fas fa-circle"></i></div>
                         <div>{{item.position}}</div>
                     </div>
                     <div class="time-line-area__period">
@@ -166,7 +162,7 @@
 
         <div class="content__achievements" data-aos="fade-up" data-aos-once="true">
             <div class="achievements__node" v-for="ach in achievements">
-                <div class="material-icons achievements__bullet">military_tech</div>
+                <div class="achievements__bullet"><i class="fas fa-bookmark"></i></div>
                 <div class="achievements__text">{{ach}}</div>
             </div>
         </div>
@@ -186,9 +182,7 @@
             <div class="education__time-line-area education__time-line-area--first" data-aos="fade-up" data-aos-once="true">
                 <div v-for="item in education[0].timeLine" class="time-line-area__position-group">
                     <div class="time-line-area__position">
-                        <div class="time-line-area__dot"><span class="material-icons">
-                                stop_circle
-                            </span></div>
+                        <div class="time-line-area__dot"><i class="fas fa-circle"></i></div>
                         <div>{{item.position}}</div>
                     </div>
                     <div class="time-line-area__period">
@@ -213,9 +207,7 @@
             <div class="education__time-line-area education__time-line-area--second" data-aos="fade-up" data-aos-once="true">
                 <div v-for="item in education[1].timeLine" class="time-line-area__position-group">
                     <div class="time-line-area__position">
-                        <div class="time-line-area__dot"><span class="material-icons">
-                                stop_circle
-                            </span></div>
+                        <div class="time-line-area__dot"><i class="fas fa-circle"></i></div>
                         <div>{{item.position}}</div>
                     </div>
                     <div class="time-line-area__period">

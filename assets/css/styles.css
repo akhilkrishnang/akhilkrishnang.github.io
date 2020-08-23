@@ -88,12 +88,16 @@ body {
     font-size: 18px;
     float: left;
 }
-.material-icons.sidebar__menu-icon {
+.sidebar__menu-icon {
     color: #b9b9b9;
-    font-size: 32px;
+    font-size: 22px;
     cursor: pointer;
     padding: 10px;
     text-decoration: none;
+    width: 32px;
+    height: 32px;
+    display: block;
+    text-align: center;
 }
 
 .sidebar__menu-icon:hover {
@@ -105,6 +109,12 @@ body {
     border-radius: 50%;
     padding: 10px;
     color: #ffce00;
+}
+.sub-skill-bullet {
+    float: left;
+    margin-right: 5px;
+    font-size: 18px;
+    color: #777;
 }
 
 .item__seperator.item__seperator--xs{
@@ -145,8 +155,13 @@ body {
     border-left: none;
 }
 .time-line-area__dot {
-    width: 30px;
-    text-align: center;
+	width: 30px;
+	text-align: center;
+	font-size: 12px;
+	color: #848484;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .time-line-area__dot .material-icons {
     font-size: 12px;
@@ -156,7 +171,8 @@ body {
     display: flex;
 }
 .achievements__bullet {
-    margin-top: 4px;    
+	margin-top: 2px;
+	color: #777;
 }
 .achievements__bullet.material-icons {
     font-size: 20px;
@@ -360,7 +376,7 @@ body {
         }
         .content__sidebar-items{
             flex-direction: column;
-            height: 270px;
+            height: 300px;
             justify-content: space-evenly;
             width: 100%;
         }
