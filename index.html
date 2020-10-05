@@ -10,7 +10,7 @@
     <meta name="author" content="Akhil Krishnan G">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="assets/css/styles.css?v=0.4">
+    <link rel="stylesheet" href="assets/css/styles.css?v=0.5">
     <link
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans+Condensed:wght@300;700&family=Open+Sans:wght@300;400;600;700;800&display=swap"
         rel="stylesheet">
@@ -24,7 +24,8 @@
         <div class="content__sidebar">
             <div class="content__sidebar-items">
                 <div class="sidebar__menu">
-                    <a href="#home" class="sidebar__menu-icon sidebar__menu-icon--active"><i class="fas fa-user"></i></a>
+                    <a href="#home" class="sidebar__menu-icon sidebar__menu-icon--active"><i
+                            class="fas fa-user"></i></a>
                 </div>
                 <div class="sidebar__menu">
                     <a href="#skills" class="sidebar__menu-icon"><i class="fas fa-tools"></i></a>
@@ -105,13 +106,15 @@
                 </div>
             </div>
 
-            <div class="experience__summary-area experience__summary-area--first" data-aos="fade-up" data-aos-once="true">
+            <div class="experience__summary-area experience__summary-area--first" data-aos="fade-up"
+                data-aos-once="true">
                 <div class="summary-area__summary">
                     {{experiences[0].summary}}
                 </div>
             </div>
 
-            <div class="experience__highlights-area experience__highlights-area--first" data-aos="fade-up" data-aos-once="true">
+            <div class="experience__highlights-area experience__highlights-area--first" data-aos="fade-up"
+                data-aos-once="true">
                 <ul>
                     <li class="highlights-area__item" v-for="(item,index) in experiences[0].highlights">
                         {{item}}
@@ -125,7 +128,8 @@
                 </div>
             </div>
 
-            <div class="experience__time-line-area experience__time-line-area--second" data-aos="fade-up" data-aos-once="true">
+            <div class="experience__time-line-area experience__time-line-area--second" data-aos="fade-up"
+                data-aos-once="true">
                 <div v-for="item in experiences[1].timeLine" class="time-line-area__position-group">
                     <div class="time-line-area__position">
                         <div class="time-line-area__dot"><i class="fas fa-circle"></i></div>
@@ -138,13 +142,15 @@
                 </div>
             </div>
 
-            <div class="experience__summary-area experience__summary-area--second" data-aos="fade-up" data-aos-once="true">
+            <div class="experience__summary-area experience__summary-area--second" data-aos="fade-up"
+                data-aos-once="true">
                 <div class="summary-area__summary">
                     {{experiences[1].summary}}
                 </div>
             </div>
 
-            <div class="experience__highlights-area experience__highlights-area--second" data-aos="fade-up" data-aos-once="true">
+            <div class="experience__highlights-area experience__highlights-area--second" data-aos="fade-up"
+                data-aos-once="true">
                 <ul>
                     <li class="highlights-area__item" v-for="(item,index) in experiences[1].highlights">
                         {{item}}
@@ -153,7 +159,8 @@
             </div>
         </div>
 
-        <div class="content__achievements-header content--header" id="achievements" data-aos="fade-up" data-aos-once="true">
+        <div class="content__achievements-header content--header" id="achievements" data-aos="fade-up"
+            data-aos-once="true">
             <div>ACHIEVEMENTS</div>
             <div class="content__seperator"></div>
         </div>
@@ -179,7 +186,8 @@
                 </div>
             </div>
 
-            <div class="education__time-line-area education__time-line-area--first" data-aos="fade-up" data-aos-once="true">
+            <div class="education__time-line-area education__time-line-area--first" data-aos="fade-up"
+                data-aos-once="true">
                 <div v-for="item in education[0].timeLine" class="time-line-area__position-group">
                     <div class="time-line-area__position">
                         <div class="time-line-area__dot"><i class="fas fa-circle"></i></div>
@@ -204,7 +212,8 @@
                 </div>
             </div>
 
-            <div class="education__time-line-area education__time-line-area--second" data-aos="fade-up" data-aos-once="true">
+            <div class="education__time-line-area education__time-line-area--second" data-aos="fade-up"
+                data-aos-once="true">
                 <div v-for="item in education[1].timeLine" class="time-line-area__position-group">
                     <div class="time-line-area__position">
                         <div class="time-line-area__dot"><i class="fas fa-circle"></i></div>
@@ -217,7 +226,8 @@
                 </div>
             </div>
 
-            <div class="education__summary-area education__summary-area--second" data-aos="fade-up" data-aos-once="true">
+            <div class="education__summary-area education__summary-area--second" data-aos="fade-up"
+                data-aos-once="true">
                 <div class="summary-area__summary">
                     {{education[1].summary}}
                 </div>
@@ -257,15 +267,12 @@
                 <a href="mailto:akhilrohini@gmail.com" target="_blank">
                     <div class="footer__icon"><img src="assets/images/social_logos/email.svg" /></div>
                 </a>
-                <a href="https://wa.me/919645568733" target="_blank">
-                    <div class="footer__icon"><img src="assets/images/social_logos/whatsapp.svg" /></div>
-                </a>
             </div>
         </div>
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <script src="assets/js/controller.js?v=0.4"></script>
+    <script src="assets/js/controller.js?v=0.5"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
