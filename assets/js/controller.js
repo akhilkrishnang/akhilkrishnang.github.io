@@ -6,21 +6,19 @@ var app = new Vue({
     el: '#profile-app',
     data: {
         mainSkills: [
-            { name: 'HTML', rank: '90' },
-            { name: 'CSS', rank: '90' },
+            { name: 'HTML+CSS', rank: '90' },
             { name: 'Javascript', rank: '85' },
             { name: 'Angular JS', rank: '80' },
             { name: 'Angular', rank: '80' },
-            { name: 'Ajax', rank: '80' },
-            { name: 'Java', rank: '80' },
-            { name: 'JSP', rank: '80' },
-            { name: 'SQL', rank: '80' },
             { name: 'NPM', rank: '80' },
+            { name: 'Node JS', rank: '80' },
+            { name: 'SQL', rank: '80' },
+            { name: 'Java', rank: '80' },
             { name: 'GIT(Bitbucket)', rank: '80' },
             { name: 'Jasmine', rank: '80' },
             { name: '+' }
         ],
-        subSkills: ['RESTful web services', 'LESS/SCSS', 'Agile/Scrum', 'JIRA', 'Google Material Design', 'Airbnb Design follower', 'Eclipse/STS ', 'VSCode', 'IBM CLM', 'Adobe Photoshop', 'Figma'],
+        subSkills: ['SCSS', 'Vue JS', 'Flutter', 'RESTful web services', 'Google Material Design & Airbnb Design follower', 'Agile/Scrum', 'JIRA', 'Eclipse/STS ', 'VSCode', 'IBM CLM', 'Adobe Photoshop', 'Figma/Adobe XD'],
         experiences: [
             {
                 companyName: 'IBS Software',
