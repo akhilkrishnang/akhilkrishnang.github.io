@@ -212,17 +212,11 @@ body {
 }
 .content__footer .footer__tech-profiles, .content__footer .footer__social {
     font-size: 25px;
-    margin: 0 10px;
-    padding-right: 10px;
-    border-right: 2px solid #ccc;
     display: flex;
     height: 35px;
 }
 .content__footer a{
     text-decoration: none;
-}
-.content__footer .footer__social {
-    border-right:none;
 }
 .footer__contact{
     font-size: 25px;
@@ -385,9 +379,6 @@ body {
         .content__footer {
             grid-area: footer;
             height: 60px;
-        }
-        .content__footer .footer__social {
-            border-right:2px solid #ccc;
         }
         .content__experience{
             display: grid;
