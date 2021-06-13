@@ -230,14 +230,16 @@ body {
     height: 35px;
 }
 .footer__icon {
-    width: 40px;
+    width: 50px;
     text-align: center;
     cursor: pointer;
+    font-size: 25px;
+    color: #526B89;
+    border-radius: 20px;
 }
-.footer__icon img{
-    height: 32px;
+.footer__icon:hover {
+    background: #f3f3f3;
 }
-
 /* Check browser support for Grid features - and enable better layout */
 
 @supports (display: grid) {
