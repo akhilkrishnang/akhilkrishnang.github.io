@@ -134,6 +134,7 @@ body {
 }
 .time-line-area__position-group:first-child .time-line-area__position{
     font-size: 28px;
+    text-align: right;
 }
 .time-line-area__position-group .time-line-area__period{
     height: 40px;

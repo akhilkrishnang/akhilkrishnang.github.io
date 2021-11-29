@@ -23,7 +23,8 @@ var app = new Vue({
             {
                 companyName: 'IBS Software',
                 timeLine: [
-                    { position: 'SOLUTION ARCHITECT', period: 'Jul 2019 - Present' },
+                    { position: 'SENIOR SOLUTION ARCHITECT', period: 'Jul 2021 - Present' },
+                    { position: 'SOLUTION ARCHITECT', period: 'Jul 2019 - Jul 2021' },
                     { position: 'TECHNICAL LEAD', period: 'Jun 2017 - Jul 2019' },
                     { position: 'SENIOR SOFTWARE ENGINEER', period: 'Jun 2016 - Jun 2017' },
                     { position: 'SOFTWARE ENGINEER', period: 'Jan 2014 - Jun 2016' }
@@ -46,7 +47,7 @@ var app = new Vue({
         ],
         achievements: [
             'Represented company in an international Hackathon event organised by International Air Transport Association (IATA) at Dublin, Ireland and bagged first prize in corporate category. Sole UI developer in the Hackathon team (IBS Software)',
-            'Awarded 1 Customer Champ, 1 Department Champ and 6 Team Champ Awards during various stages of career for UX protoype design,  creating new business components, introducing coding standards, and fine tuning UI components (IBS Software)',
+            'Awarded 1 Customer Champ, 1 Department Champ and 7 Team Champ Awards during various stages of career for UX protoype design,  creating new business components, introducing coding standards, and fine tuning UI components (IBS Software)',
             'Best Debutant Award for an extra ordinary start in organisation (IBS Software)',
             'Oil & Gas Logistics Industry business knowledge & certification (IBS Software)'
         ],
